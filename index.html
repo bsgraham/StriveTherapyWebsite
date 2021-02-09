@@ -4,6 +4,13 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
 <html>
 	<head>
 		<title>Strive Therapy</title>
@@ -16,11 +23,14 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">Strive Therapy PLLC</a>
+					<a href="index.html" class="logo">Brittany Graham, MA, LMFTA</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="generic.html">Generic</a>
-						<a href="elements.html">Elements</a>
+						<a href="index.html" class="currentPage">Home</a>
+						<a href="service.html">Services</a>
+						<a href="background.html">Background</a>
+						<a href="resources.html">Resources</a>
+						<a href="faq.html">FAQ</a>
+						<a href="contact.html">Contact</a>
 					</nav>
 				</div>
 			</header>
@@ -29,10 +39,10 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h1>Website under construction</h1>
-					<ul class="actions">
-						<li><a href="#" class="button alt">Get Started</a></li>
-					</ul>
+					<div class="logoContainer">
+						<h1>Strive Therapy</h1>
+						<h3>PLLC</h3>
+					</div>
 				</div>
 			</section>
 
@@ -40,9 +50,16 @@
 			<section id="one">
 				<div class="inner">
 					<header>
-						<h2>Magna Etiam Lorem</h2>
+						<h2>Welcome</h2>
 					</header>
-					<p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu, erisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante.</p>
+					<p>Hello and welcome to Strive Therapy, I’m glad you’re here. At Strive Therapy, I believe that you hold the power to heal yourself and live your best possible life. 
+						But maybe, you need a little help to access that power. Sometimes our past hinders us from unlocking our full potential. Maybe you’ve experienced trauma, a life transition, 
+						or are living with anxiety or depression. I hear you and can help. With your life expertise and my clinical knowledge, we can work together to help you move forward 
+						in a meaningful and lasting way.</p>
+					<p>
+						Therapy is hard work. It requires time, emotional labor, and change. Therefore, you need to go through this therapeutic journey with someone you trust. 
+						Please explore my website, learn more about me, my services, and style of therapy. If I seem like a good fit, reach out. I’d love to work with you!
+					</p>
 					<ul class="actions">
 						<li><a href="#" class="button alt">Learn More</a></li>
 					</ul>
@@ -125,34 +142,27 @@
 					<header>
 						<h2>Get in Touch</h2>
 					</header>
-					<form method="post" action="#">
+					<form id="emailForm" method="post">
 						<div class="field half first">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+							<label for="name" class="emailLabel">Name</label> <span id="emailNameWarning" class="emailWarning">You must include a name to send an email</span>
+							<input type="text" name="name" id="emailName" />
 						</div>
 						<div class="field half">
-							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
+							<label for="email" class="emailLabel">Phone</label> <span id="emailPhoneWarning" class="emailWarning">You must include a phone number to send an email</span>
+							<input type="text" name="email" id="emailPhone" />
 						</div>
 						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6"></textarea>
+							<label for="message" class="emailLabel">What brings you to therapy?</label> <span id="emailMessageWarning" class="emailWarning">You must include a message to send an email</span>
+							<textarea name="message" id="emailMessage" rows="6" placeholder="Please keep this brief, as email is not confidential."></textarea>
 						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="alt" /></li>
-						</ul>
+						<div class="emailButton">
+							<input type="button" value="Send Message" class="alt" onclick="sendEmail();" />
+						</div>
 					</form>
+
 					<div class="copyright">
-						&copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>
-					</div>
+						&copy; 2021 Strive Therapy PLLC. All rights reserved. Website template by <a href="https://templated.co/" target="_blank">TEMPLATED</a>. Images from <a href="https://unsplash.com/" target="_blank">Unsplash</a>.					</div>
 				</div>
 			</section>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

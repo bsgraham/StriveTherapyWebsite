@@ -70,3 +70,46 @@
 	});
 
 })(jQuery);
+
+function sendEmail() {
+	// Validate form data
+	var name = document.getElementById("emailName").value;
+	var phone = document.getElementById("emailPhone").value;
+	var message = document.getElementById("emailMessage").value;
+
+	var problems = 0;
+
+	if (!name) {
+		document.getElementById("emailNameWarning").style.display = "inline";
+		problems++;
+	} else {
+		document.getElementById("emailNameWarning").style.display = "none";
+	}
+
+	if (!phone) {
+		document.getElementById("emailPhoneWarning").style.display = "inline";
+		problems++;
+	} else {
+		document.getElementById("emailPhoneWarning").style.display = "none";
+	}
+
+	if (!message) {
+		document.getElementById("emailMessageWarning").style.display = "inline";
+		problems++;
+	} else {
+		document.getElementById("emailMessageWarning").style.display = "none";
+	}
+
+	if (problems > 0) {
+
+
+		return;
+	}
+
+	var body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\nWhat brings you to therapy?\n${message}\n\n`);
+
+	let form = document.getElementById('emailForm');
+	form.action = `mailto:brittany@strivetherapywa.com?subject=Strive Therapy PLLC Client Inquiry&body=${body}`;
+
+	form.submit();
+}
