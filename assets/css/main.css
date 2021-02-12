@@ -4,7 +4,8 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
-@import url(fontawesome.min.css);
+@import url(font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 @font-face {
 	font-family: "MoonTime";
@@ -37,6 +38,7 @@
 
 	body {
 		line-height: 1;
+		min-width: 480px !important;
 	}
 
 	ol, ul {
@@ -1602,7 +1604,7 @@
 	}
 
 	body, input, select, textarea {
-		font-family: "Lato", sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 15pt;
 		font-weight: 300;
 		line-height: 2;
@@ -2123,7 +2125,7 @@
 		.select-wrapper:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Montserrat', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2187,7 +2189,7 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Montserrat', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -2322,7 +2324,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Montserrat', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -3144,8 +3146,9 @@
 			}
 
 		#header .logo {
-			font-family: 'Pacifico', cursive;
-			display: inline-block;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			display: inline;
 			height: inherit;
 			left: 0;
 			line-height: inherit;
@@ -3164,6 +3167,14 @@
 				color: #b85781;
 			}
 
+			#header .subLogo {
+				font-size: 0.6em;
+			}
+
+			.logo b {
+				font-size: 1em;
+			}
+
 		#header a {
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
@@ -3175,16 +3186,16 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			font-weight: 700;
-			font-size: .85em;
+			font-size: .75em;
 		}
 
 			#header a:hover {
 				color: rgba(255, 255, 255, 1);
 			}
 
-			#header a:last-child {
+			/* #header a:last-child {
 				padding-right: 0em;
-			}
+			} */
 
 			@media screen and (max-width: 736px) {
 
@@ -3208,7 +3219,7 @@
 		display: inline-block;
 	}
 
-		@media screen and (max-width: 1300px) {
+		@media screen and (max-width: 1400px) {
 
 			#nav {
 				display: none;
@@ -3230,23 +3241,23 @@
 		.navPanelToggle:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Montserrat', sans-serif;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
 			color: #fff;
 			display: block;
-			font-size: 16px;
-			height: 2.25em;
+			font-size: 14px;
+			height: 1em;
 			left: 0.5em;
-			line-height: 2.25em;
+			line-height: 1em;
 			position: absolute;
 			text-align: center;
 			top: 0.5em;
 			width: 3.5em;
 		}
 
-		@media screen and (max-width: 1300px) {
+		@media screen and (max-width: 1400px) {
 
 			.navPanelToggle {
 				display: block;
@@ -3301,6 +3312,10 @@
 		display: none;
 	}
 
+		#navPanel:hover {
+			color: var(--stWine);
+		}
+
 		#navPanel.visible {
 			-moz-transform: translatex(0);
 			-webkit-transform: translatex(0);
@@ -3347,11 +3362,11 @@
 			#navPanel .close:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Montserrat', sans-serif;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
-				content: '\f00d';
+				content: 'x';
 				width: 3em;
 				height: 3em;
 				line-height: 3em;
@@ -3366,7 +3381,7 @@
 				color: inherit;
 			}
 
-		@media screen and (max-width: 1300px) {
+		@media screen and (max-width: 1400px) {
 
 			#navPanel {
 				display: block;
@@ -3379,7 +3394,7 @@
 	#banner {
 		background-color: #e5474b;
 		color: #f2a3a5;
-		padding: 13em 0 11em 0;
+		padding: 4em 0 3em 0;
 		background-color: #0c0c0c;
 		background-image: url("../../images/banner_home.png");
 		background-size: cover;
@@ -3540,7 +3555,7 @@
 		@media screen and (max-width: 1680px) {
 
 			#banner {
-				padding: 10em 0 8em 0;
+				padding: 4em 0 3em 0;
 			}
 
 			#banner br {
@@ -3552,7 +3567,7 @@
 		@media screen and (max-width: 1280px) {
 
 			#banner {
-				padding: 8em 0 6em 0;
+				padding: 4em 0 3em 0;
 			}
 
 			#banner br {
@@ -3563,7 +3578,7 @@
 		@media screen and (max-width: 980px) {
 
 			#banner {
-				padding: 12em 0 10em 0;
+				padding: 4em 0 3em 0;
 			}
 
 				#banner br {
@@ -3575,7 +3590,7 @@
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 4em 0 2em 0;
+				padding: 4em 0 3em 0;
 			}
 
 				#banner h1 {
@@ -3587,7 +3602,7 @@
 		@media screen and (max-width: 480px) {
 
 			#banner {
-				padding: 5em 0 3em 0;
+				padding: 4em 0 3em 0;
 			}
 
 				#banner ul {
@@ -4019,6 +4034,8 @@
 
 	.homeTitleContainer {
 		width: 50vw;
+		position: relative;
+		z-index: 1000;
 	}
 
 	.homeTitle {
@@ -4027,15 +4044,25 @@
 		width: 100%;
 		font-size: 11vw;
 		text-align: center;
-		text-shadow: 2px 2px var(--stDark);
+		text-shadow: 4px 2px 2px var(--stDark);
 	}
 
 	.homeSubTitle {
-		font-family: Didot;
+		font-family: 'Montserrat', sans-serif;
 		color: white;
 		font-size: 2vw;
 		text-align: center;
 		position: relative;
-		top: -5vw;
-		text-shadow: 2px 2px var(--stDark);
+		top: -7vw;
+		text-shadow: 4px 2px 2px var(--stDark);
+	}
+
+	#clientPortal {
+		padding: 0px 20px !important;
+	}
+
+	.pageContainer {
+		padding: 0;
+		margin: 0;
+		min-width: 480px;
 	}
