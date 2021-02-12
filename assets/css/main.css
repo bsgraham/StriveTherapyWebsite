@@ -1,11 +1,24 @@
-@import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Pacifico");
-
 /*
 	Introspect by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+
+@import url(fontawesome.min.css);
+
+@font-face {
+	font-family: "MoonTime";
+	src: url("../fonts/MoonTime-Regular.otf") format("opentype"),
+		 url("../fonts/MoonTime-Regular.ttf") format("truetype");
+}
+
+:root {
+	--stWine: #8e4364;
+	--stVine: #7f9b9a;
+	--stNeutral: #232b33;
+	--stDark: #4e5662;
+	--stLight: #bdbce4;
+}
 
 /* Reset */
 
@@ -1585,7 +1598,7 @@
 
 	body {
 		background-color: #dbdce4;
-		color: #4e5662;
+		color: var(--stDark);
 	}
 
 	body, input, select, textarea {
@@ -1664,7 +1677,7 @@
 		line-height: 1.5;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
-		color: #8e4364;
+		color: var(--stWine);
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1954,8 +1967,8 @@
 		button.alt,
 		.button.alt {
 			background-color: transparent;
-			box-shadow: inset 0 0 0 2px #7f9b9a;
-			color: #7f9b9a !important;
+			box-shadow: inset 0 0 0 2px var(--stVine);
+			color: var(--stVine) !important;
 		}
 
 			input[type="submit"].alt:hover,
@@ -1987,7 +2000,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #7f9b9a;
+			background-color: var(--stVine);
 			color: #ffffff !important;
 		}
 
@@ -3101,7 +3114,7 @@
 	}
 
 	#header {
-		background: #4e5662;
+		background: var(--stDark);
 		color: #d5d5d5;
 		cursor: default;
 		height: 5em;
@@ -3195,7 +3208,7 @@
 		display: inline-block;
 	}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1300px) {
 
 			#nav {
 				display: none;
@@ -3233,7 +3246,7 @@
 			width: 3.5em;
 		}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1300px) {
 
 			.navPanelToggle {
 				display: block;
@@ -3353,7 +3366,7 @@
 				color: inherit;
 			}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 1300px) {
 
 			#navPanel {
 				display: block;
@@ -3530,6 +3543,10 @@
 				padding: 10em 0 8em 0;
 			}
 
+			#banner br {
+				display: none;
+			}
+
 		}
 
 		@media screen and (max-width: 1280px) {
@@ -3538,6 +3555,9 @@
 				padding: 8em 0 6em 0;
 			}
 
+			#banner br {
+				display: none;
+			}
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3743,21 +3763,13 @@
 
 		}
 
-	.logoContainer {
-		width: fit-content
-	}
-
-		.logoContainer h3 {
-			text-align: center;
-		}
-
 /* Footer */
 
 	#footer {
-		background-color: #7f9b9a;
+		background-color: var(--stVine);
 		color: #b6b6b6;
 		padding: 4em 0 2em 0;
-		background: #7f9b9a;
+		background: var(--stVine);
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -3980,7 +3992,7 @@
 	}
 
 	.currentPage {
-		color: #7f9b9a !important;
+		color: var(--stVine) !important;
 	}
 
 	.currentPage:hover {
@@ -3988,7 +4000,7 @@
 	}
 
 	.resourceLink {
-		color: #7f9b9a;
+		color: var(--stVine);
 	}
 
 	.resourceIconContainer {
@@ -4003,4 +4015,27 @@
 	.resourceTable tbody, .resourceTable tr, .resourceTable td {
 		border: 0px;
 		vertical-align: middle;
+	}
+
+	.homeTitleContainer {
+		width: 50vw;
+	}
+
+	.homeTitle {
+		font-family: MoonTime;
+		color: white;
+		width: 100%;
+		font-size: 11vw;
+		text-align: center;
+		text-shadow: 2px 2px var(--stDark);
+	}
+
+	.homeSubTitle {
+		font-family: Didot;
+		color: white;
+		font-size: 2vw;
+		text-align: center;
+		position: relative;
+		top: -5vw;
+		text-shadow: 2px 2px var(--stDark);
 	}
