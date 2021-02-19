@@ -18,6 +18,7 @@
 	--stDarkWine: #6b304a;
 	--stLightWine: #b14b77;
 	--stVine: #7f9b9a;
+	--stLightVine: #c5cece;
 	--stDark1: #9aa0aa;
 	--stDark2: #4e5662;
 	--stDark3: #232b33;
@@ -2343,6 +2344,10 @@
 
 /* Image */
 
+	.portrait {
+		width: 80% !important;
+	}
+
 	.image {
 		border-radius: 0;
 		border: 0;
@@ -2597,6 +2602,14 @@
 	}
 
 /* Table */
+
+	.doubleCell {
+		column-span: 2;
+	}
+	
+	.tripleCell {
+		column-span: 3;
+	}
 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
@@ -3750,10 +3763,79 @@
 
 		}
 
+	/* Double Green */
+	.doubleGreen {
+		padding: 1em 10% 0 10%;
+		background: #f3f3f3;
+		background: var(--stLightVine);
+	}
+
+		.doubleGreen .inner {
+			display: -ms-flexbox;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: row;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+		}
+
+			.doubleGreen .inner article {
+				width: 60%;
+				padding: 0 2em 0 2em;
+			}
+
+		@media screen and (max-width: 980px) {
+
+			.doubleGreen {
+				padding: 4em 0em 2em 0em;
+				background: var(--stLightVine);
+			}
+
+				.doubleGreen .inner {
+					-moz-flex-direction: column;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+				}
+
+					.doubleGreen .inner article {
+						width: 100%;
+						padding: 0 4em 0 4em;
+					}
+
+						.doubleGreen .inner article:first-child {
+							padding-bottom: 2em;
+						}
+
+						.doubleGreen .inner article:last-child {
+							padding-top: 2em;
+						}
+			
+			.lowPad {
+				padding: 4em 0 4em 0;
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.doubleGreen {
+				padding: 2em 0em 0.1em 0em;
+			}
+
+			.lowPad {
+				padding: 4em 0 4em 0;
+			}
+
+		}
+
 	/* Double Dark */
 	.doubleDark {
 		padding: 6em 10% 4em 10%;
 		background: var(--stDark3);
+		color: white;
 	}
 
 		.doubleDark .inner {
@@ -3776,7 +3858,7 @@
 		@media screen and (max-width: 980px) {
 
 			.doubleDark {
-				padding: 4em 4em 2em 4em;
+				padding: 4em 0em 2em 0em;
 				background: var(--stDark3);
 			}
 
@@ -3804,7 +3886,7 @@
 		@media screen and (max-width: 736px) {
 
 			.doubleDark {
-				padding: 2em 4em 0.1em 4em;
+				padding: 2em 0em 0.1em 0em;
 			}
 
 		}
