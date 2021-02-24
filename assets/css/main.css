@@ -3787,6 +3787,10 @@
 				padding: 0 2em 0 2em;
 			}
 
+			.doubleGreen .inner article:first-child {
+				padding: 2em 2em 0 2em;
+			}
+
 		@media screen and (max-width: 980px) {
 
 			.doubleGreen {
