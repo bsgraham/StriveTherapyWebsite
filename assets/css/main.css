@@ -26,6 +26,8 @@
 	--stLight2: #c0c7ce;
 	--stLight3: #9faebd;
 	--lightBackground: #dbdce4;
+	--stPurpleSucculent: #afa0bd;
+	--stPotsBackground: #c8c9cb;
 }
 
 /* Reset */
@@ -3690,6 +3692,7 @@
 
 	#one {
 		padding: 6em 10em 4em 10em;
+		background: var(--lightBackground);
 	}
 
 		@media screen and (max-width: 980px) {
@@ -3850,6 +3853,7 @@
 
 		}
 
+	
 	/* Double Dark */
 	.doubleDark {
 		padding: 6em 10% 4em 10%;
@@ -4410,4 +4414,40 @@
 
 	.smallPad {
 		padding: 1em;
+	}
+
+	#pots {
+		background: var(--stPotsBackground);
+	}
+
+	.banner {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		max-height: 20em;
+	}
+
+	.banner img {
+		padding: 0;
+		max-height: 20em;
+		max-width: 100%;
+		margin: auto;
+	}
+
+	.lightBackground {
+		background-color: var(--lightBackground);
+	}
+
+	.stLightVine {
+		background-color: var(--stLightVine) !important;
+	}
+
+	.contactBackground {
+		background-color: #cdd7e2 !important;
+	}
+
+	.resourcesBorder {
+		padding: 40px;
+		background-image: url("../../images/succulents.jpg");
+		background-repeat: repeat;
 	}
