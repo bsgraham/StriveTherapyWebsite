@@ -106,12 +106,14 @@ function sendEmail() {
 		return;
 	}
 
-	var body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\nWhat brings you to therapy?\n${message}\n\n`);
+	let body = encodeURIComponent(`Name: ${name}\r\nPhone: ${phone}\r\n\r\nWhat brings you to therapy?\r\n${message}\r\n\r\n`);
+	let action = `mailto:brittany@strivetherapywa.com?subject=Strive Therapy PLLC Client Inquiry&body=${body}`;
 
-	let form = document.getElementById('emailForm');
-	form.action = `mailto:brittany@strivetherapywa.com?subject=Strive Therapy PLLC Client Inquiry&body=${body}`;
+	let emailLink = document.createElement('a');
+	emailLink.target = "_blank";
+	emailLink.href = action;
 
-	form.submit();
+	emailLink.click();
 }
 
 function smoothScroll(id) {
