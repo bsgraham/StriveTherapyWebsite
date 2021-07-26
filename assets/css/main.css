@@ -4450,3 +4450,23 @@
 		background-image: url("../../images/succulents.jpg");
 		background-repeat: repeat;
 	}
+
+	.social {
+		width: 100%;
+	}
+
+	.social img {
+		margin-left: 15px;
+		height: 89px;
+	}
+
+	.therapyDenLogo img {
+		width: 100px;
+		height: 100px;
+		display: block;
+		margin: 10px;
+	}
+
+	.psychologyToday {
+		float: left;
+	}
