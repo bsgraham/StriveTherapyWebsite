@@ -3198,13 +3198,15 @@
 		top: 0;
 		width: 100%;
 		z-index: 10001;
+		padding: 0 20px 0 20px;
 	}
 
 		#header .inner {
-			max-width: 75em;
-			width: calc(100% - 6em);
+			/* max-width: 75em; */
+			/* width: calc(100% - 6em); */
 			margin: 0 auto;
 			position: relative;
+			padding: 0px 20px 0px 20px;
 		}
 
 			@media screen and (max-width: 480px) {
@@ -3226,7 +3228,7 @@
 			margin: 0;
 			padding: 0;
 			position: absolute;
-			top: 0;
+			top: -0.33em;
 			color: #9faebd;
 			font-size: 1.75em;
 			text-transform: none;
@@ -3240,6 +3242,9 @@
 
 			#header .subLogo {
 				font-size: 0.6em;
+				position: absolute;
+				left: 0;
+				top: 1.5em;
 			}
 
 			.logo b {
@@ -3807,6 +3812,9 @@
 				padding: 2em 2em 0 2em;
 			}
 
+			.doubleGreen .inner article:last-child {
+				padding: 2em 2em 0 2em;
+			}
 		@media screen and (max-width: 980px) {
 
 			.doubleGreen {
@@ -4387,6 +4395,10 @@
 		padding: 0px 20px !important;
 	}
 
+	#BYOPDisclosure {
+		margin: 20px 0 0 0;
+	}
+
 	.pageContainer {
 		padding: 0;
 		margin: 0;
@@ -4400,6 +4412,10 @@
 
 	#calendarImage {
 		width: 25em;
+	}
+
+	#byopImage {
+		width: 90%;
 	}
 
 	.fullSize {
@@ -4469,4 +4485,58 @@
 
 	.psychologyToday {
 		float: left;
+	}
+
+	.price {
+		font-size: 16pt;
+		font-weight: bold;
+		color: var(--stDark3);
+	}
+
+	.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	.modal-disclosure {
+		background-color: #fefefe;
+		margin: 15% auto; /* 15% from the top and centered */
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+		max-width: 1200px;
+	}
+
+	.modal-close {
+		color: #aaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.modal-close:hover,
+	.modal-close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	}
+
+	.disclosureHeader {
+		text-align: center;
+		text-decoration: underline;
+		font-weight: bold;
+		color: black;
+		width: 100%;
+	}
+
+	.marginTopBottom {
+		margin: 15px 0 15px 0;
 	}

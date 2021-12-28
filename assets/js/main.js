@@ -3,6 +3,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+const BYOP_LINK = "https://buy.stripe.com/cN29CN1UcdH0h1u3cc";
 
 (function($) {
 
@@ -118,4 +119,28 @@ function sendEmail() {
 
 function smoothScroll(id) {
 	document.getElementById(id).scrollIntoView({behavior: "smooth"});
+}
+
+function showModal() {
+	document.getElementById("byop-modal").style.display = "block";
+	document.body.style.overflow = "hidden";
+}
+
+function hideModal() {
+	document.getElementById("byop-modal").style.display = "none";
+	document.body.style.overflow = "auto";
+}
+
+function goToByop() {
+	setTimeout( () => {
+		window.open(BYOP_LINK, "_blank");
+		hideModal();
+		document.getElementById("byopAcknowledge").checked = false;
+	}, 1000);
+}
+
+window.onclick = function(event) {
+	if (event.target == document.getElementById("byop-modal")) {
+		hideModal();
+	  }
 }
