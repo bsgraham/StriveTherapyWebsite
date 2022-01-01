@@ -121,26 +121,29 @@ function smoothScroll(id) {
 	document.getElementById(id).scrollIntoView({behavior: "smooth"});
 }
 
-function showModal() {
-	document.getElementById("byop-modal").style.display = "block";
+function showModal(id) {
+	document.getElementById(id).style.display = "block";
 	document.body.style.overflow = "hidden";
 }
 
-function hideModal() {
-	document.getElementById("byop-modal").style.display = "none";
+function hideModal(id) {
+	document.getElementById(id).style.display = "none";
 	document.body.style.overflow = "auto";
 }
 
 function goToByop() {
 	setTimeout( () => {
 		window.open(BYOP_LINK, "_blank");
-		hideModal();
+		hideModal('byop-modal');
 		document.getElementById("byopAcknowledge").checked = false;
 	}, 1000);
 }
 
 window.onclick = function(event) {
 	if (event.target == document.getElementById("byop-modal")) {
-		hideModal();
-	  }
+		hideModal('byop-modal');
+	}
+	else if (event.target == document.getElementById("gfen-modal")) {
+		hideModal('gfen-modal');
+	}
 }
