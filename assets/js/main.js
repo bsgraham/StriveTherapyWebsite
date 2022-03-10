@@ -3,7 +3,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
-const BYOP_LINK = "https://buy.stripe.com/cN29CN1UcdH0h1u3cc";
+const BYOP_LINK = "https://buy.stripe.com/8wM3ep2Yg6eyh1u001";
 
 (function($) {
 
