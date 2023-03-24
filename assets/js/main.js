@@ -4,6 +4,7 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 const BYOP_LINK = "https://buy.stripe.com/8wM3ep2Yg6eyh1u001";
+const worksheet_link="https://buy.stripe.com/3cs8yJ6as9qK8uY28a";
 
 (function($) {
 
@@ -136,6 +137,13 @@ function goToByop() {
 		window.open(BYOP_LINK, "_blank");
 		hideModal('byop-modal');
 		document.getElementById("byopAcknowledge").checked = false;
+	}, 1000);
+}
+function goToworksheet() {
+	setTimeout( () => {
+		window.open(worksheet_link, "blank");
+		hideModal('worksheet-modal');
+		document.getElementById("worksheetAcknowledge").checked = false;
 	}, 1000);
 }
 
