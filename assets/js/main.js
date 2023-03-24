@@ -4,7 +4,7 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 const BYOP_LINK = "https://buy.stripe.com/8wM3ep2Yg6eyh1u001";
-const worksheet_link="https://buy.stripe.com/3cs8yJ6as9qK8uY28a";
+const worksheet_link = "https://buy.stripe.com/3cs8yJ6as9qK8uY28a";
 
 (function($) {
 
@@ -132,7 +132,7 @@ function hideModal(id) {
 	document.body.style.overflow = "auto";
 }
 
-function goToByop() {
+function goTo() {
 	setTimeout( () => {
 		window.open(BYOP_LINK, "_blank");
 		hideModal('byop-modal');
@@ -155,3 +155,13 @@ window.onclick = function(event) {
 		hideModal('gfen-modal');
 	}
 }
+
+window.onclick = function(event) {
+	if (event.target == document.getElementById("worksheet-modal")) {
+		hideModal('worksheet-modal');
+   	}
+	else if (event.target == document.getElementById("gfen-modal")) {
+		hideModal('gfen-modal');
+	}
+}
+	
