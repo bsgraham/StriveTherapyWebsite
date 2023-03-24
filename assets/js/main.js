@@ -134,7 +134,7 @@ function hideModal(id) {
 
 function goTo() {
 	setTimeout( () => {
-		window.open(BYOP_LINK, "_blank");
+		window.open(BYOP_LINK, "blank");
 		hideModal('byop-modal');
 		document.getElementById("byopAcknowledge").checked = false;
 	}, 1000);
