@@ -2656,7 +2656,7 @@
 	}
 
 	.tableRowUnderline td {
-		border-bottom: 1px solid var(--stLightWine);
+		border-bottom: none;
 	}
 
 	table {
